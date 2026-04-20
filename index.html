@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>es club • подписка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css?v=20260223-1" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header class="app-header">
+        <div class="logo">es club</div>
+      </header>
+
+      <!-- Screen: tariffs -->
+      <main id="screen-tariffs" class="screen screen--active">
+        <section class="hero">
+          <h1 class="hero__title">выбери подписку</h1>
+        </section>
+
+        <section class="tariffs">
+          <article class="tariff-card" data-tariff-id="guest">
+            <div class="tariff-card__badge">default</div>
+            <div class="tariff-card__image tariff-card__image--basic"></div>
+            <h2 class="tariff-card__title">
+              Тариф GUEST <span class="tariff-card__title-note"> (6 клубов в месяц)</span>
+            </h2>
+            <p class="tariff-card__description">
+              ↗ больше 35 форматов клубов<br />
+              ↗ 50+ уроков на платформе<br />
+              ↗ личный онбординг с проверкой уровня и составлением плана<br />
+              ↗ чат с менторами и комьюнити
+            </p>
+            <div class="tariff-card__actions">
+              <button class="btn btn--secondary js-select-tariff" data-months="1">
+                1 месяц
+              </button>
+              <button class="btn btn--primary js-select-tariff" data-months="3">
+                3 месяца
+              </button>
+            </div>
+          </article>
+
+          <article class="tariff-card tariff-card--highlighted" data-tariff-id="regular">
+            <div class="tariff-card__badge tariff-card__badge--accent">most popular</div>
+            <div class="tariff-card__image tariff-card__image--plus"></div>
+            <h2 class="tariff-card__title">
+              Тариф REGULAR <span class="tariff-card__title-note"> (12 клубов в месяц)</span>
+            </h2>
+            <p class="tariff-card__description">
+              ↗ больше 35 форматов клубов<br />
+              ↗ 50+ уроков на платформе<br />
+              ↗ личный онбординг с проверкой уровня и составлением плана<br />
+              ↗ чат с менторами и комьюнити
+            </p>
+            <div class="tariff-card__actions">
+              <button class="btn btn--secondary js-select-tariff" data-months="1">
+                1 месяц
+              </button>
+              <button class="btn btn--primary js-select-tariff" data-months="3">
+                3 месяца
+              </button>
+            </div>
+          </article>
+
+          <article class="tariff-card" data-tariff-id="local">
+            <div class="tariff-card__badge">unlimited</div>
+            <div class="tariff-card__image tariff-card__image--plus"></div>
+            <h2 class="tariff-card__title">
+              Тариф LOCAL <span class="tariff-card__title-note"> ( ≈100 клубов в месяц)</span>
+            </h2>
+            <p class="tariff-card__description">
+              ↗ больше 35 форматов клубов<br />
+              ↗ 50+ уроков на платформе<br />
+              ↗ личный онбординг с проверкой уровня и составлением плана<br />
+              ↗ чат с менторами и комьюнити<br />
+              Безлимит ~ 100 клубов
+            </p>
+            <div class="tariff-card__actions">
+              <button class="btn btn--secondary js-select-tariff" data-months="1">
+                1 месяц
+              </button>
+              <button class="btn btn--primary js-select-tariff" data-months="3">
+                3 месяца
+              </button>
+            </div>
+          </article>
+        </section>
+
+        <footer class="app-footer">
+          <p>если что-то пойдёт не так — напиши нам, we got you 🤍</p>
+        </footer>
+      </main>
+
+      <!-- Screen: offer / payment -->
+      <main id="screen-payment" class="screen">
+        <button class="back-link" id="back-to-tariffs">&larr; вернуться к тарифам</button>
+
+        <section class="hero hero--compact">
+          <h1 class="hero__title">подтверди подписку</h1>
+          <p class="hero__subtitle">
+            one more step to fluency — проверим детали и оформим оплату.
+          </p>
+        </section>
+
+        <section class="payment-summary">
+          <div class="payment-card">
+            <div class="payment-card__header">
+              <div>
+                <div id="summary-tariff-title" class="payment-card__title">Тариф</div>
+                <div id="summary-tariff-months" class="payment-card__meta">—</div>
+              </div>
+              <div class="payment-card__amount">
+                <div id="summary-amount-wrap" class="payment-card__amount-inner">
+                  <span id="summary-amount-old" class="payment-card__price payment-card__price--old" hidden></span>
+                  <span id="summary-amount" class="payment-card__price">— ₽</span>
+                  <span id="summary-amount-caption" class="payment-card__caption" hidden>
+                    стоимость со скидкой
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-card__body">
+              <ul class="payment-features">
+                <li>talking about yourself</li>
+                <li>pronunciation</li>
+                <li>bussines communication</li>
+                <li>relationships language</li>
+                <li>preparing for ielts</li>
+                <li>advanced vocabulary</li>
+              </ul>
+
+              <label class="field">
+                <span class="field__label">промокод</span>
+                <div class="field__input-wrap">
+                  <input
+                    id="promo-input"
+                    type="text"
+                    class="field__input"
+                    placeholder="если есть – вводи сюда"
+                    autocomplete="off"
+                  />
+                  <span id="promo-throbber" class="throbber" hidden aria-hidden="true"></span>
+                  <button id="promo-submit" class="promo-submit" type="button">→</button>
+                </div>
+              </label>
+
+              <div id="promo-message" class="promo-message" hidden></div>
+            </div>
+
+            <div class="payment-card__footer">
+              <button id="pay-button" class="btn btn--primary btn--full">
+                перейти к оплате
+              </button>
+            </div>
+          </div>
+
+          <p class="payment-note">
+            нажимая «перейти к оплате» бот пришлет ссылку на оплату. если клуб не зайдёт — у тебя
+            будет 7 дней, чтобы передумать, no questions asked.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="./app.js?v=20260223-1" type="module"></script>
+  </body>
+  </html>
